@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
 
     // warpImage();
     // colorDetection();
-    // shapeDetection();
-    faceDetection();
+    shapeDetection();
+    // faceDetection();
     return 0;
 }

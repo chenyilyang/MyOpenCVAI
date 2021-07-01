@@ -4,6 +4,7 @@
 #include "chapter6.hpp"
 #include "chapter7.hpp"
 #include "chapter8.hpp"
+#include "project1.hpp"
 
 using std::cout;
 using std::endl;
@@ -14,6 +15,7 @@ int main() {
     // warpImage();
     // colorDetection();
     // shapeDetection();
-    faceDetection();
+    // faceDetection();
+    virtualPainter();
     return 0;
 }

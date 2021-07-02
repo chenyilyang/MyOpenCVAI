@@ -2,8 +2,8 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <iostream>
-int hmin = 0, smin = 110, vmin = 153;
-int hmax = 19, smax = 240, vmax = 255;
+int hmin = 0, smin = 0, vmin = 0;
+int hmax = 179, smax = 255, vmax = 255;
 void colorDetection() {
     std::string path = "resources/lambo.png";
     cv::Mat img = cv::imread(path);

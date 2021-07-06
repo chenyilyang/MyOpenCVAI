@@ -7,6 +7,9 @@
 #include "project1.hpp"
 #include "project2.hpp"
 
+#include "opencvml1.hpp"
+#include "opencvml2.hpp"
+
 using std::cout;
 using std::endl;
 
@@ -18,6 +21,14 @@ int main() {
     // shapeDetection();
     // faceDetection();
     // virtualPainter();
-    scanPaper();
+    // scanPaper();
+
+    /**
+     * opencvML
+     * */
+    // testRotatedRect();
+    // testMatCalc();
+    // testImageTransform();
+    testHistgram();
     return 0;
 }

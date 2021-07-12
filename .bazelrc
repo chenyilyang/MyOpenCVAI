@@ -1,0 +1,14 @@
+
+# Basic build settings
+build --jobs 128
+
+# Sets the default Apple platform to macOS.It should be first
+build --apple_platform_type=macos
+# Allow debugging with XCODE
+build --apple_generate_dsym
+
+# macOS
+build:macos --cxxopt=-std=c++17
+build:macos --host_cxxopt=-std=c++17
+build:macos --copt=-w
+build:macos --linkopt=-Wl,-rpath,/Users/mac/OpenCV/opencv_env/lib

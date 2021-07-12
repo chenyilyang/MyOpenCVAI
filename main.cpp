@@ -8,9 +8,6 @@
 #include "project2.hpp"
 #include "project3.hpp"
 
-#include "opencvml1.hpp"
-#include "opencvml2.hpp"
-
 using std::cout;
 using std::endl;
 
@@ -24,14 +21,5 @@ int main() {
     // virtualPainter();
     // scanPaper();
     plateDetection();
-
-    /**
-     * opencvML
-     * */
-    // testRotatedRect();
-    // testMatCalc();
-    // testMat();
-    // testImageTransform();
-    // testHistgram();
     return 0;
 }

@@ -1,0 +1,5 @@
+new_local_repository(
+    name = "opencv",
+    path = "/Users/mac/OpenCV/opencv_env",
+    build_file = "@//main:opencv_macos.BUILD",
+)

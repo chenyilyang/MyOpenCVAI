@@ -4,6 +4,6 @@ cc_binary(
     name = "opencvml1",
     srcs = ["opencvml1.cc",],
     deps = [
-        "//third_party:opencv",
+        "@//third_party:opencv",
     ],
 )

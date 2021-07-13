@@ -1,4 +1,7 @@
 
+# Tensorflow needs remote repo
+common --experimental_repo_remote_exec
+
 # Basic build settings
 build --jobs 128
 # enable platform type specific config

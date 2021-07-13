@@ -128,3 +128,28 @@ http_archive(
         "https://zlib.net/zlib-1.2.11.tar.gz",
     ],
 )
+
+
+# Tensorflow repo should always go after the other external dependencies.
+# 2021-06-07
+_TENSORFLOW_GIT_COMMIT = "700533808e6016dc458bb2eeecfca4babfc482ec"
+_TENSORFLOW_SHA256 = "b6edd7f4039bfc19f3e77594ecff558ba620091d0dc48181484b3d9085026126"
+http_archive(
+    name = "org_tensorflow",
+    urls = [
+      "https://github.com/tensorflow/tensorflow/archive/%s.tar.gz" % _TENSORFLOW_GIT_COMMIT,
+    ],
+    patches = [
+        "@//third_party:org_tensorflow_compatibility_fixes.diff",
+        "@//third_party:org_tensorflow_objc_cxx17.diff",
+    ],
+    patch_args = [
+        "-p1",
+    ],
+    strip_prefix = "tensorflow-%s" % _TENSORFLOW_GIT_COMMIT,
+    sha256 = _TENSORFLOW_SHA256,
+)
+load("@org_tensorflow//tensorflow:workspace3.bzl", "tf_workspace3")
+tf_workspace3()
+load("@org_tensorflow//tensorflow:workspace2.bzl", "tf_workspace2")
+tf_workspace2()

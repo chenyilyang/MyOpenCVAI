@@ -1,7 +1,8 @@
 
 # Basic build settings
 build --jobs 128
-
+# enable platform type specific config
+build --enable_platform_specific_config
 # Sets the default Apple platform to macOS.It should be first
 build --apple_platform_type=macos
 # Allow debugging with XCODE

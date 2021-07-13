@@ -1,5 +1,5 @@
 #include <opencv2/opencv.hpp>
 
-void testKMeans() {
-    
+int main() {
+   return 0; 
 }

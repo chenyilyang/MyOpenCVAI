@@ -99,7 +99,7 @@ void drawHist(string windowName, Mat &srcImg) {
     }
     imshow(windowName, drawImage);
 }
-void testHistgram() {
+int main() {
     Mat lemu = imread("resources/lemu.jpg", 0);
     Mat dstImg;
     //直方图均衡化
@@ -115,4 +115,5 @@ void testHistgram() {
 
     cv::waitKey(0);
     cv::destroyAllWindows();
+    return 0;
 }

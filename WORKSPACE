@@ -60,7 +60,16 @@ load(
 
 apple_rules_dependencies()
 
-
+new_local_repository(
+    name = "linux_opencv",
+    build_file = "@//third_party:linux_opencv.BUILD",
+    path = "/home/chenyiliang/OpenCV/opencv_env",
+)
+new_local_repository(
+    name = "linux_ffmpeg",
+    build_file = "@//third_party:linux_ffmpeg.BUILD",
+    path = "/usr",
+)
 new_local_repository(
     name = "macos_opencv",
     build_file = "@//third_party:macos_opencv.BUILD",

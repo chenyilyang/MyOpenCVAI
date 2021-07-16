@@ -3,7 +3,6 @@ package(default_visibility = ["//visibility:public"])
 alias(
     name = "opencv",
     actual = select({
-        "//opencvml2:macos" : ":opencv_binary",
         "//conditions:default": ":opencv_binary",
     }),
     visibility = ["//visibility:public"],
@@ -11,8 +10,9 @@ alias(
 alias(
     name = "opencv_binary",
     actual = select({
-        "//opencvml2:macos" : "@macos_opencv//:opencv",
-        "//conditions:default" : "@macos_opencv//:opencv",
+	"//hand_tracking:macos" : "@macos_opencv//:opencv",
+	"//mediapipe:macos" : "@macos_opencv//:opencv",
+        "//conditions:default" : "@linux_opencv//:opencv",
     }),
 )
 
@@ -38,7 +38,7 @@ cc_library(
     name = "glog",
     visibility = ["//visibility:public"],
     deps = select({
-        "//opencvml2:macos": [
+        "//mediapipe:macos": [
             "@com_github_glog_glog//:glog",
         ],
         "//conditions:default": [

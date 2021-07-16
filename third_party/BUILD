@@ -10,7 +10,6 @@ alias(
 alias(
     name = "opencv_binary",
     actual = select({
-	"//hand_tracking:macos" : "@macos_opencv//:opencv",
 	"//mediapipe:macos" : "@macos_opencv//:opencv",
         "//conditions:default" : "@linux_opencv//:opencv",
     }),

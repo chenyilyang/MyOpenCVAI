@@ -1,8 +1,8 @@
-
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/imgcodecs.hpp>
+#include <opencv2/opencv.hpp>
 #include <iostream>
+#include <fstream>
+using namespace std;
+using namespace cv;
 
 bool isG0Mode = true;
 uint32_t StringLen = 0;
@@ -11,9 +11,7 @@ uchar* gData;
 char x_ValueString[10], y_ValueString[10], s_ValueString[10];
 volatile uint16_t yLast = 0xFFFF;
 std::string RESOURCE_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources";
-std::string OUTPUT_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources"
-using namespace std;
-using namespace cv;
+std::string OUTPUT_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources";
 float matrix[3][4]{
 	{0, 0, 1.0 / 8, 1.0 / 8},
 	{1.0 / 8, 1.0 / 8, 1.0 / 8, 0},
@@ -837,7 +835,6 @@ void bwLabel(const uchar *bw, int *label, int h, int w, int sMax, int speed)
 	f.close();
 
 	delete []gDataHead;
-	delete []cDataHead;
 }
 
 /*
@@ -927,6 +924,6 @@ void ImageContoursToGCode(Mat &srcImg, int linePerMillimetre, int engraveWidth, 
 
 int main() { 
 	cv::Mat srcImg = cv::imread(RESOURCE_PATH + "/lemu.jpg");
-	ImageToGCode(srcImg, 12, srcImg.cols(), srcImg.rows(), 1000, 2500, true, true);
+	ImageToGCode(srcImg, 12, srcImg.cols, srcImg.rows, 1000, 2500, true, true);
 	return 0;
 }

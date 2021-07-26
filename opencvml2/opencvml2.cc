@@ -101,17 +101,17 @@ void drawHist(string windowName, Mat &srcImg) {
 }
 int main() {
     Mat lemu = imread("resources/lemu.jpg", 0);
-    Mat dstImg;
+    //Mat dstImg;
     //直方图均衡化
-    equalizeHist(lemu, dstImg);
+    //equalizeHist(lemu, dstImg);
     //保存均衡化的结果
-    imwrite("resources/lemu_equalizeHist.jpg", dstImg);
+    //imwrite("resources/lemu_equalizeHist.jpg", dstImg);
     //计算并显示直方图
-    drawHist("Histogram", lemu);
-    drawHist("Equallize Histogram", dstImg);
+    //drawHist("Histogram", lemu);
+    //drawHist("Equallize Histogram", dstImg);
 
     imshow("lemu", lemu);
-    imshow("equalizeHist_lemu", dstImg);
+    //imshow("equalizeHist_lemu", dstImg);
 
     cv::waitKey(0);
     cv::destroyAllWindows();

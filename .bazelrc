@@ -13,11 +13,12 @@ build --apple_generate_dsym
 #default
 build --cxxopt=-std=c++17
 build --host_cxxopt=-std=c++17
-nuild --copt=-w
+build --copt=-w
 #Linux
 build:linux --cxxopt=-std=c++17
 build:linux --host_cxxopt=-std=c++17
 build:linux --copt=-w
+build:linux --linkopt=-Wl,-rpath,/home/diasfloc/OpenCV/opencv_env/lib
 
 # macOS
 build:macos --cxxopt=-std=c++17

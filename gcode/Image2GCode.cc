@@ -7,8 +7,10 @@ float quality;
 uchar* gData;
 char x_ValueString[10], y_ValueString[10], s_ValueString[10];
 volatile uint16_t yLast = 0xFFFF;
-#define RESOURCE_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources"
-#define OUTPUT_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources"
+std::string RESOURCE_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources";
+std::string OUTPUT_PATH = "/home/chenyiliang/OpenCV/MyOpenCVAI/resources"
+using namespace std;
+using namespace cv;
 float matrix[3][4]{
 	{0, 0, 1.0 / 8, 1.0 / 8},
 	{1.0 / 8, 1.0 / 8, 1.0 / 8, 0},

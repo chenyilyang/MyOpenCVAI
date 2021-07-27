@@ -6,3 +6,7 @@ cc_binary(
         "@//third_party:opencv",
     ],
 )
+cc_binary(
+    name = "gcode_uncompress",
+    srcs = ["GCodeUncompress.cc",],
+)
